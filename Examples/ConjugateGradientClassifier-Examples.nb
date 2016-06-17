@@ -1,0 +1,288 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10013,        280]
+NotebookOptionsPosition[      9131,        245]
+NotebookOutlinePosition[      9485,        261]
+CellTagsIndexPosition[      9442,        258]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Get", "[", "\"\<ConjugateGradientClassifier`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.675178411024208*^9, 3.675178433711054*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{
+               "The", " ", "arguments", " ", "for", " ", "the", " ", 
+                "function", " ", 
+                RowBox[{"are", ":", " ", "a"}]}], ")"}], " ", "training", " ",
+               "data", " ", "b"}], ")"}], " ", "costfunction"}], ",", " ", 
+           "c"}], ")"}], "costfunction", " ", "gradient"}], ",", " ", "d"}], 
+       ")"}], " ", "initial", " ", "parameter", " ", 
+      RowBox[{"(", "theta", ")"}]}], ",", " ", 
+     RowBox[{"&", " ", "e"}]}], ")"}], " ", "hyperparameter", " ", "values", 
+   " ", 
+   RowBox[{
+    RowBox[{"(", "lambda", ")"}], ".", " ", "At"}], " ", "present", " ", 
+   "the", " ", "algorithm", " ", "only", " ", "works", " ", "for", " ", 
+   "numerical", " ", "data"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.6751804675903788`*^9, 3.675180533534155*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data1", " ", "=", " ", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<bostonhomes.dat\>\"", ",", " ", "\"\<Data\>\""}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.67517858344652*^9, 3.6751786295562477`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ConjugateGradientClassifier", "[", 
+  RowBox[{"data1", ",", "costfunc", ",", "gradient", ",", 
+   RowBox[{"thetazero", "[", "14", "]"}], ",", " ", 
+   RowBox[{"lambdazero", "[", "2", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.675179154053626*^9, 3.67517917477078*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"MinCost[trainingdata]\"\>", "\[Rule]", 
+    "10.947421135945653`"}], ",", 
+   RowBox[{"\<\"theta_trained =\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "22.532805449601945`", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "0.9257858035142943`"}], "}"}], ",", 
+      RowBox[{"{", "1.0820421629332018`", "}"}], ",", 
+      RowBox[{"{", "0.1433073798730296`", "}"}], ",", 
+      RowBox[{"{", "0.6821125619640462`", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "2.061124470789726`"}], "}"}], ",", 
+      RowBox[{"{", "2.676406413171597`", "}"}], ",", 
+      RowBox[{"{", "0.022366619741465886`", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "3.105527381666171`"}], "}"}], ",", 
+      RowBox[{"{", "2.6629638615192146`", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "2.0791140983519067`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "2.0634649507780294`"}], "}"}], ",", 
+      RowBox[{"{", "0.8500837937368938`", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "3.749276116299023`"}], "}"}]}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.675179158763178*^9, 3.675179175480856*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data2", " ", "=", " ", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<slumptest.dat\>\"", ",", " ", "\"\<Data\>\""}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.675179194967828*^9, 3.675179196903975*^9}, {
+  3.675179235905703*^9, 3.6751792608989553`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ConjugateGradientClassifier", "[", 
+  RowBox[{"data2", ",", "costfunc", ",", "gradient", ",", 
+   RowBox[{"thetazero", "[", "10", "]"}], ",", " ", 
+   RowBox[{"lambdazero", "[", "2", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.675179270289699*^9, 3.6751792745122643`*^9}, {
+  3.675179340817675*^9, 3.675179341855734*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"MinCost[trainingdata]\"\>", "\[Rule]", 
+    "2.7438774297952335`"}], ",", 
+   RowBox[{"\<\"theta_trained =\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "36.039344790274875`", "}"}], ",", 
+      RowBox[{"{", "4.68156601340709`", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "1.945961141828271`"}], "}"}], ",", 
+      RowBox[{"{", "4.004208816494118`", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "4.715759034040977`"}], "}"}], ",", 
+      RowBox[{"{", "0.09738667013722932`", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "4.8403110866593115`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "2.397506159963996`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "2.0657340073823627`"}], "}"}], ",", 
+      RowBox[{"{", "1.4889187688064829`", "}"}]}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.675179343215029*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data3", " ", "=", " ", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<ex2data2.txt\>\"", ",", " ", "\"\<Data\>\""}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.675179363808621*^9, 3.6751793916493483`*^9}, {
+  3.675179443474112*^9, 3.675179480704226*^9}, {3.6751798214724483`*^9, 
+  3.675179833038006*^9}, {3.67518001427204*^9, 3.6751800397825117`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ConjugateGradientClassifier", "[", 
+  RowBox[{"data3", ",", "costfunc", ",", "gradient", ",", 
+   RowBox[{"thetazero", "[", "3", "]"}], ",", " ", 
+   RowBox[{"lambdazero", "[", "2", "]"}], ",", " ", 
+   RowBox[{"Method", "\[Rule]", " ", "\"\<Logistic\>\""}], ",", " ", 
+   RowBox[{"\"\<HypothesisMethod\>\"", "\[Rule]", " ", "\"\<Sigmoid\>\""}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.675178567729032*^9, 3.675178571349614*^9}, {
+  3.6751786347535343`*^9, 3.6751786600895357`*^9}, {3.6751787095742607`*^9, 
+  3.675178712947069*^9}, {3.675178882112393*^9, 3.675178945205049*^9}, {
+  3.675179041954393*^9, 3.675179042175763*^9}, {3.675179394945656*^9, 
+  3.675179410825429*^9}, {3.675179486153667*^9, 3.6751794864879932`*^9}, {
+  3.675180052640855*^9, 3.6751800528229103`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"MinCost[trainingdata]\"\>", "\[Rule]", 
+    "0.6902412934318654`"}], ",", 
+   RowBox[{"\<\"theta_trained =\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"-", "0.034980370725240066`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "0.15151696118334956`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "0.009237302480400998`"}], "}"}]}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.675178644862198*^9, 3.675178667671685*^9}, {
+   3.675178710179967*^9, 3.675178718654622*^9}, {3.675178921083187*^9, 
+   3.675178945496224*^9}, 3.675178989301374*^9, {3.675179019925005*^9, 
+   3.675179042665197*^9}, 3.675179414771743*^9, 3.675179457302796*^9, 
+   3.67517949220315*^9, 3.675179544514518*^9, 3.675179601742414*^9, 
+   3.675179640945731*^9, 3.67517977509095*^9, {3.675180043638308*^9, 
+   3.6751800813566017`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data4", " ", "=", " ", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<chapman.dat\>\"", ",", " ", "\"\<Data\>\""}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.675180089065031*^9, 3.675180102277975*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ConjugateGradientClassifier", "[", 
+  RowBox[{"data4", ",", "costfunc", ",", "gradient", ",", 
+   RowBox[{"thetazero", "[", "8", "]"}], ",", " ", 
+   RowBox[{"lambdazero", "[", "2", "]"}], ",", " ", 
+   RowBox[{"Method", "\[Rule]", " ", "\"\<Logistic\>\""}], ",", " ", 
+   RowBox[{"\"\<HypothesisMethod\>\"", "\[Rule]", " ", "\"\<Sigmoid\>\""}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.675180110974889*^9, 3.675180131438921*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"MinCost[trainingdata]\"\>", "\[Rule]", 
+    "0.3371142071705279`"}], ",", 
+   RowBox[{"\<\"theta_trained =\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"-", "2.2464347051202065`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "0.019102131590501205`"}], "}"}], ",", 
+      RowBox[{"{", "0.5355572465813192`", "}"}], ",", 
+      RowBox[{"{", "0.11321298818537961`", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "0.06677675665092252`"}], "}"}], ",", 
+      RowBox[{"{", "0.40368085594487607`", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"-", "0.18352838700471574`"}], "}"}], ",", 
+      RowBox[{"{", "0.5012007371726405`", "}"}]}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.6751801136355553`*^9, 3.675180134865974*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{Automatic, 120}, {17, Automatic}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 7, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 157, 2, 32, "Input"],
+Cell[718, 24, 1081, 29, 75, "Input"],
+Cell[1802, 55, 248, 6, 32, "Input"],
+Cell[CellGroupData[{
+Cell[2075, 65, 297, 5, 54, "Input"],
+Cell[2375, 72, 1247, 29, 75, "Output"]
+}, Open  ]],
+Cell[3637, 104, 296, 7, 32, "Input"],
+Cell[CellGroupData[{
+Cell[3958, 115, 349, 6, 54, "Input"],
+Cell[4310, 123, 977, 24, 75, "Output"]
+}, Open  ]],
+Cell[5302, 150, 393, 8, 32, "Input"],
+Cell[CellGroupData[{
+Cell[5720, 162, 804, 13, 54, "Input"],
+Cell[6527, 177, 964, 21, 54, "Output"]
+}, Open  ]],
+Cell[7506, 201, 243, 6, 32, "Input"],
+Cell[CellGroupData[{
+Cell[7774, 211, 457, 8, 54, "Input"],
+Cell[8234, 221, 881, 21, 75, "Output"]
+}, Open  ]]
+}
+]
+*)
+
